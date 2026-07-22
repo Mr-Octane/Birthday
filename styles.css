@@ -147,10 +147,11 @@ h1 {
   position: absolute;
   width: 10px;
   height: 14px;
-  opacity: 0.95;
+  opacity: 1;
   border-radius: 2px;
   will-change: transform, opacity;
   transform-origin: center;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes confetti-fall {
@@ -161,11 +162,12 @@ h1 {
 /* Party popper */
 .popper {
   position: absolute;
-  width: 8px;
-  height: 8px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  opacity: 0.95;
+  opacity: 1;
   will-change: transform, opacity;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
 @keyframes popper-move {

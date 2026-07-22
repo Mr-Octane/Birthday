@@ -6,7 +6,8 @@ const initFloatingHearts = () => {
 
   const heartShapes = ['💗', '💕', '❣️'];
 
-  for (let i = 0; i < 16; i += 1) {
+  // Increased from 16 to 40 hearts for more animation
+  for (let i = 0; i < 40; i += 1) {
     const heart = document.createElement('span');
     heart.className = 'heart';
     heart.textContent = heartShapes[i % heartShapes.length];
@@ -92,8 +93,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const ENTRY_MS = 3000; // duration of entry animation (ms)
   createEntryCelebration(ENTRY_MS);
 
-  // initialize reveal after entry finishes, slight buffer for smoothness
+  // Reveal hero section immediately and other sections after animation
   setTimeout(() => {
+    const hero = document.querySelector('#hero');
+    if (hero) {
+      hero.classList.add('is-visible');
+    }
     revealOnScroll();
   }, ENTRY_MS - 300);
 

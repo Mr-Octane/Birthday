@@ -48,7 +48,6 @@ body {
   min-height: 64vh;
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 30px 70px var(--shadow);
-  overflow: hidden;
 }
 
 .hero::before {

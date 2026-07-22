@@ -103,13 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
     arrow.addEventListener('click', (e) => {
       e.preventDefault();
       const gallery = document.querySelector('.gallery-section');
-      if (gallery) gallery.scrollIntoView({ behavior: 'smooth' }); 
-    
-      setTimeout(() => {
-  console.log("Removing confetti...");
-  container.innerHTML = '';
-  container.style.display = 'none';
-}, duration + 700);
+      if (gallery) gallery.scrollIntoView({ behavior: 'smooth' });
     });
   }
 });

@@ -22,7 +22,7 @@ const initFloatingHearts = () => {
 /* Create a lightweight entry celebration: confetti + poppers.
    Confetti is CSS-animated and removed after a short timeout to avoid blocking.
 */
-const createEntryCelebration = (duration = 4000) => {
+const createEntryCelebration = (duration = 3000) => {
   if (prefersReducedMotion) return;
   const container = document.getElementById('entry-celebration');
   if (!container) return;
@@ -89,7 +89,7 @@ if (!prefersReducedMotion) {
 
 document.addEventListener('DOMContentLoaded', () => {
   // play entry celebration first, then reveal hero and other sections
-  const ENTRY_MS = 4000; // duration of entry animation (ms)
+  const ENTRY_MS = 3000; // duration of entry animation (ms)
   createEntryCelebration(ENTRY_MS);
 
   // initialize reveal after entry finishes, slight buffer for smoothness

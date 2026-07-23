@@ -1,27 +1,29 @@
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// 💖 FLOATING HEARTS
-const initFloatingHearts = () => {
+/* FLOATING HEARTS */
+function initFloatingHearts() {
   const container = document.querySelector('.floating-hearts');
   if (!container) return;
 
-  const heartShapes = ['💗', '💕', '❣️'];
+  const shapes = ['💗', '💕', '❣️'];
 
   for (let i = 0; i < 40; i++) {
     const heart = document.createElement('span');
     heart.className = 'heart';
-    heart.textContent = heartShapes[i % heartShapes.length];
+    heart.textContent = shapes[i % shapes.length];
+
     heart.style.left = `${Math.random() * 100}%`;
     heart.style.top = `${Math.random() * 100}%`;
     heart.style.animationDelay = `${Math.random() * 4}s`;
     heart.style.animationDuration = `${6 + Math.random() * 4}s`;
     heart.style.opacity = `${0.35 + Math.random() * 0.35}`;
+
     container.appendChild(heart);
   }
-};
+}
 
-// ✨ SCROLL REVEAL
-const revealOnScroll = () => {
+/* FADE-UP SCROLL REVEAL */
+function revealOnScroll() {
   const elements = document.querySelectorAll('.fade-up');
 
   const observer = new IntersectionObserver((entries) => {
@@ -34,32 +36,13 @@ const revealOnScroll = () => {
   }, { threshold: 0.2 });
 
   elements.forEach((el) => observer.observe(el));
-};
+}
 
-// 🚀 MAIN LOAD
+/* MAIN */
 document.addEventListener('DOMContentLoaded', () => {
-  // show all fade-up content immediately, then still wire up scroll reveal
-  document.querySelectorAll('.fade-up').forEach((el) => {
-    el.classList.add('is-visible');
-  });
-
-  const hero = document.querySelector('#hero');
-  if (hero) hero.classList.add('is-visible');
-
   revealOnScroll();
 
-  // 💖 hearts
   if (!prefersReducedMotion) {
     initFloatingHearts();
-  }
-
-  // scroll arrow
-  const arrow = document.querySelector('.scroll-arrow');
-  if (arrow) {
-    arrow.addEventListener('click', (e) => {
-      e.preventDefault();
-      const gallery = document.querySelector('.gallery-section');
-      if (gallery) gallery.scrollIntoView({ behavior: 'smooth' });
-    });
   }
 });

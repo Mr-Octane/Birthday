@@ -36,6 +36,12 @@ const revealOnScroll = () => {
   elements.forEach((el) => observer.observe(el));
 };
 
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".fade-up").forEach(el => {
+    el.classList.add("is-visible");
+  });
+});
+
 // 🚀 MAIN LOAD
 document.addEventListener('DOMContentLoaded', () => {
   const ENTRY_MS = 1200; // small delay for smooth feel

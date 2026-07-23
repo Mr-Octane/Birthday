@@ -20,45 +20,6 @@ const initFloatingHearts = () => {
   }
 };
 
-/* Create a lightweight entry celebration: confetti + poppers.
-   Confetti is CSS-animated and removed after a short timeout to avoid blocking.
-*/
-const createEntryCelebration = (duration = 3000) => {
-  if (prefersReducedMotion) return;
-  const container = document.getElementById('entry-celebration');
-  if (!container) return;
-
-  const colors = ['#0066FF', '#FF0000', '#00CC00', '#000000', '#9933FF'];
-  const confettiCount = 50;
-
-  for (let i = 0; i < confettiCount; i++) {
-    const el = document.createElement('div');
-    el.className = 'confetti';
-    const w = 8 + Math.round(Math.random() * 12);
-    const h = w + Math.round(Math.random() * 6);
-    el.style.width = w + 'px';
-    el.style.height = h + 'px';
-    el.style.left = Math.random() * 100 + '%';
-    el.style.top = -Math.random() * 20 + 'vh';
-    el.style.background = colors[Math.floor(Math.random() * colors.length)];
-    el.style.transform = `rotate(${Math.random() * 360}deg)`;
-    const delay = Math.random() * 0.5;
-    const dur = 3 + Math.random() * 1.5;
-    el.style.animation = `confetti-fall ${dur}s ${delay}s cubic-bezier(.2,.7,.3,1) forwards`;
-    container.appendChild(el);
-  }
-
-  // a few poppers near the top center for celebration effect
-  for (let i = 0; i < 12; i++) {
-    const p = document.createElement('div');
-    p.className = 'popper';
-    p.style.background = colors[Math.floor(Math.random() * colors.length)];
-    p.style.left = 45 + Math.random() * 10 + '%';
-    p.style.bottom = '2%';
-    const delay = 0.1 + Math.random() * 0.5;
-    p.style.animation = `popper-move 1.5s ${delay}s cubic-bezier(.2,.7,.3,1) forwards`;
-    container.appendChild(p);
-  }
 
   // remove the overlay after duration + small buffer
   setTimeout(() => {

@@ -38,6 +38,11 @@ body {
   z-index: 5;
 }
 
+.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
 .hero {
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);

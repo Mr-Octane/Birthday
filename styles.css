@@ -63,6 +63,11 @@ body {
   background: rgba(255, 203, 219, 0.35);
 }
 
+.fade-up {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
 .hero::after {
   content: '';
   position: absolute;

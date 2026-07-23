@@ -3,104 +3,98 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Birthday Mom</title>
-
-  <!-- Poppins font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Your CSS -->
-  <link rel="stylesheet" href="styles.css">
+  <title>Happy Birthday Amma ❤️</title>
+  <meta name="description" content="A modern responsive birthday website for Amma." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-  <!-- HEART SYSTEMS -->
+  <!-- REQUIRED FOR HEART ANIMATION -->
   <div class="floating-hearts"></div>
   <div class="hearts"></div>
 
-  <!-- MAIN PAGE WRAPPER -->
-  <div class="page">
+  <main class="page">
 
     <!-- HERO SECTION -->
     <section id="hero" class="hero fade-up">
       <div class="hero-content">
-        <p class="eyebrow">Happy Birthday</p>
-        <h1 class="fade-up">Mom</h1>
+        <h1 class="fade-up">Happy Birthday Ma ❤️</h1>
         <p class="subtitle fade-up">
-          You are the heart of our home, the light of our lives, and the reason we smile every day.
+          You are the heart of our family, the one who fills our lives with love, strength, and happiness.
+          Thank you for everything you do ❤️
         </p>
-
-        <div class="hero-illustration fade-up">💖</div>
-
-        <div class="scroll-arrow fade-up">↓</div>
+        <div class="hero-illustration fade-up" aria-hidden="true">🎂🕯️</div>
       </div>
     </section>
 
     <!-- PHOTO GALLERY -->
-    <section class="gallery-section fade-up">
+    <section class="gallery-section fade-up" aria-label="Birthday photo gallery">
       <div class="section-header">
         <span class="section-label">Memories</span>
-        <h2 class="fade-up">Our Beautiful Moments</h2>
+        <h2 class="fade-up">Photo gallery</h2>
         <p class="section-copy fade-up">
-          A small collection of the memories that make our hearts full.
+          A gentle right-to-left carousel of our favorite moments. Hover to pause and enjoy each memory.
         </p>
       </div>
 
-      <div class="photo-carousel fade-up">
+      <div class="photo-carousel" aria-label="Scrolling family photos">
         <div class="slider-track">
 
           <!-- GROUP 1 -->
           <div class="slider-group">
-            <div class="slider-card">
-              <img src="https://source.unsplash.com/random/400x400?happy" alt="Memory 1">
-            </div>
-            <div class="slider-card">
-              <img src="https://source.unsplash.com/random/400x400?family" alt="Memory 2">
-            </div>
-            <div class="slider-card">
-              <img src="https://source.unsplash.com/random/400x400?love" alt="Memory 3">
-            </div>
+            <article class="slider-card"><img src="images/gallery-1.jpeg" alt="Family photo 1" /></article>
+            <article class="slider-card"><img src="images/gallery-2.jpeg" alt="Family photo 2" /></article>
+            <article class="slider-card"><img src="images/gallery-3.jpeg" alt="Family photo 3" /></article>
+            <article class="slider-card"><img src="images/gallery-4.jpeg" alt="Family photo 4" /></article>
+            <article class="slider-card"><img src="images/gallery-5.jpeg" alt="Family photo 5" /></article>
+            <article class="slider-card"><img src="images/gallery-6.jpeg" alt="Family photo 6" /></article>
+            <article class="slider-card"><img src="images/gallery-7.jpeg" alt="Family photo 7" /></article>
+            <article class="slider-card"><img src="images/gallery-8.jpeg" alt="Family photo 8" /></article>
+            <article class="slider-card"><img src="images/gallery-9.jpeg" alt="Family photo 9" /></article>
+            <article class="slider-card"><img src="images/gallery-10.jpeg" alt="Family photo 10" /></article>
+            <article class="slider-card"><img src="images/gallery-11.jpeg" alt="Family photo 11" /></article>
+            <article class="slider-card"><img src="images/gallery-12.jpeg" alt="Family photo 12" /></article>
           </div>
 
-          <!-- GROUP 2 (repeat for infinite scroll) -->
-          <div class="slider-group">
-            <div class="slider-card">
-              <img src="https://source.unsplash.com/random/400x400?flowers" alt="Memory 4">
-            </div>
-            <div class="slider-card">
-              <img src="https://source.unsplash.com/random/400x400?smile" alt="Memory 5">
-            </div>
-            <div class="slider-card">
-              <img src="https://source.unsplash.com/random/400x400?birthday" alt="Memory 6">
-            </div>
+          <!-- GROUP 2 (duplicate for infinite scroll) -->
+          <div class="slider-group" aria-hidden="true">
+            <article class="slider-card"><img src="images/gallery-1.jpeg" alt="Family photo 1" /></article>
+            <article class="slider-card"><img src="images/gallery-2.jpeg" alt="Family photo 2" /></article>
+            <article class="slider-card"><img src="images/gallery-3.jpeg" alt="Family photo 3" /></article>
+            <article class="slider-card"><img src="images/gallery-4.jpeg" alt="Family photo 4" /></article>
+            <article class="slider-card"><img src="images/gallery-5.jpeg" alt="Family photo 5" /></article>
+            <article class="slider-card"><img src="images/gallery-6.jpeg" alt="Family photo 6" /></article>
+            <article class="slider-card"><img src="images/gallery-7.jpeg" alt="Family photo 7" /></article>
+            <article class="slider-card"><img src="images/gallery-8.jpeg" alt="Family photo 8" /></article>
+            <article class="slider-card"><img src="images/gallery-9.jpeg" alt="Family photo 9" /></article>
+            <article class="slider-card"><img src="images/gallery-10.jpeg" alt="Family photo 10" /></article>
+            <article class="slider-card"><img src="images/gallery-11.jpeg" alt="Family photo 11" /></article>
+            <article class="slider-card"><img src="images/gallery-12.jpeg" alt="Family photo 12" /></article>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- MESSAGE CARD -->
+    <!-- MESSAGE SECTION -->
     <section class="message-card fade-up">
       <div class="message-content">
-        <h2 class="fade-up">A Message for You</h2>
+        <h2 class="fade-up">For Amma</h2>
         <p class="fade-up">
-          Mom, you are the strongest, kindest, and most loving person I know.  
-          Thank you for every sacrifice, every smile, and every moment of love you’ve given us.
+          Amma, your love is the gentle light that makes our home feel warm and safe.
+          Every memory with you is precious, and today we celebrate you with all our hearts.
         </p>
-        <p class="fade-up">
-          Today is your day — and you deserve all the joy in the world.
-        </p>
-        <div class="message-signoff fade-up">With all my love,  
-          <br>— Your Child 💗
-        </div>
+        <p class="message-signoff fade-up">With love always, your family</p>
       </div>
     </section>
 
-  </div>
+  </main>
 
-  <!-- Your JS -->
   <script src="script1.js"></script>
-
 </body>
 </html>
 

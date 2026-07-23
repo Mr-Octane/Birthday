@@ -68,6 +68,11 @@ body {
   transform: none !important;
 }
 
+section, h1, p, .carousel {
+  position: relative;
+  z-index: 2;
+}
+
 .hero::after {
   content: '';
   position: absolute;

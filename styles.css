@@ -34,6 +34,8 @@ body {
   padding: 1.5rem 1rem 2rem;
   display: grid;
   gap: 1.5rem;
+  position: relative;
+  z-index: 5;
 }
 
 .hero {
@@ -43,13 +45,12 @@ body {
   padding: 3rem 2rem;
   border-radius: 32px;
   text-align: center;
-  /* center content vertically for a true hero feel */
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 64vh;
-  background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 30px 70px var(--shadow);
+  z-index: 5;
 }
 
 .hero::before {
@@ -61,21 +62,6 @@ body {
   height: 220px;
   border-radius: 50%;
   background: rgba(255, 203, 219, 0.35);
-}
-
-.fade-up {
-  opacity: 1 !important;
-  transform: none !important;
-}
-
-section, h1, p, .carousel {
-  position: relative;
-  z-index: 2;
-}
-
-.page, .hero, .message-card {
-  position: relative;
-  z-index: 5;
 }
 
 .hero::after {
@@ -92,6 +78,21 @@ section, h1, p, .carousel {
 .hero-content {
   position: relative;
   z-index: 5;
+}
+
+section, h1, p, .carousel {
+  position: relative;
+  z-index: 2;
+}
+
+.message-card {
+  position: relative;
+  z-index: 5;
+}
+
+.fade-up {
+  opacity: 1;
+  transform: none;
 }
 
 .eyebrow {
@@ -153,8 +154,6 @@ h1 {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(6px); }
 }
-
-
 
 .section-header {
   text-align: center;
@@ -282,10 +281,14 @@ h1 {
   color: var(--accent);
 }
 
+/* Floating hearts background animation — sits fixed over the whole page,
+   behind the content (z-index 1 vs .page's z-index 5) so it never covers text */
 .floating-hearts {
-  position: absolute;
+  position: fixed;
   inset: 0;
+  z-index: 1;
   pointer-events: none;
+  overflow: hidden;
 }
 
 .heart {
@@ -294,16 +297,6 @@ h1 {
   color: rgba(200, 78, 131, 0.55);
   opacity: 0;
   animation: floatHeart 8s ease-in-out infinite;
-}
-
-.fade-up {
-  opacity: 1;
-  transform: none;
-}
-
-.fade-up.is-visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 @keyframes floatHeart {
@@ -370,55 +363,6 @@ h1 {
     flex: 0 0 min(200px, 68vw);
     max-width: 220px;
   }
-
-  .hearts {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.heart {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: pink;
-  transform: rotate(45deg);
-  animation: float 6s linear infinite;
-  opacity: 0.6;
-}
-
-.heart::before,
-.heart::after {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: pink;
-  border-radius: 50%;
-}
-
-.heart::before {
-  top: -10px;
-  left: 0;
-}
-
-.heart::after {
-  left: -10px;
-  top: 0;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(100vh) rotate(45deg);
-  }
-  100% {
-    transform: translateY(-10vh) rotate(45deg);
-  }
-}
 
   .slider-card img {
     height: 240px;

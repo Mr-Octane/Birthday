@@ -73,6 +73,11 @@ section, h1, p, .carousel {
   z-index: 2;
 }
 
+.page, .hero, .message-card {
+  position: relative;
+  z-index: 5;
+}
+
 .hero::after {
   content: '';
   position: absolute;

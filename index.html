@@ -4,94 +4,90 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Happy Birthday Amma ❤️</title>
-
+  <meta name="description" content="A modern responsive birthday website for Amma." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-  <!-- FLOATING HEARTS -->
+  <!-- REQUIRED FOR HEART ANIMATION -->
   <div class="floating-hearts"></div>
+  
 
   <main class="page">
 
-    <!-- HERO -->
+    <!-- HERO SECTION -->
     <section id="hero" class="hero fade-up">
       <div class="hero-content">
         <h1 class="fade-up">Happy Birthday Ma ❤️</h1>
-
         <p class="subtitle fade-up">
           You are the heart of our family, the one who fills our lives with love, strength, and happiness.
           Thank you for everything you do ❤️
         </p>
-
-        <div class="hero-illustration fade-up">🎂🕯️</div>
+        <div class="hero-illustration fade-up" aria-hidden="true">🎂🕯️</div>
       </div>
     </section>
 
-    <!-- GALLERY -->
-    <section class="gallery-section fade-up">
+    <!-- PHOTO GALLERY -->
+    <section class="gallery-section fade-up" aria-label="Birthday photo gallery">
       <div class="section-header">
         <span class="section-label">Memories</span>
-        <h2 class="fade-up">Photo Gallery</h2>
+        <h2 class="fade-up">Photo gallery</h2>
         <p class="section-copy fade-up">
           A gentle right-to-left carousel of our favorite moments. Hover to pause and enjoy each memory.
         </p>
       </div>
 
-      <div class="photo-carousel">
+      <div class="photo-carousel" aria-label="Scrolling family photos">
         <div class="slider-track">
 
           <!-- GROUP 1 -->
           <div class="slider-group">
-            <article class="slider-card"><img src="images/gallery-1.jpeg" /></article>
-            <article class="slider-card"><img src="images/gallery-2.jpeg" /></article>
-            <article class="slider-card"><img src="images/gallery-3.jpeg" /></article>
-            <article class="slider-card"><img src="images/gallery-4.jpeg" /></article>
-            <article class="slider-card"><img src="images/gallery-5.jpeg" /></article>
-            <article class="slider-card"><img src="images/gallery-6.jpeg" /></article>
-            <article class="slider-card"><img src="images/gallery-7.jpeg" /></article>
-            <article class="slider-card"><img src="images/gallery-8.jpeg" /></article>
-            <article class="slider-card"><img src="images/gallery-9.jpeg" /></article>
-            <article class="slider-card"><img src="images/gallery-10.jpeg" /></article>
-            <article class="slider-card"><img src="images/gallery-11.jpeg" /></article>
-            <article class="slider-card"><img src="images/gallery-12.jpeg" /></article>
+            <article class="slider-card"><img src="images/gallery-1.jpeg" alt="Family photo 1" /></article>
+            <article class="slider-card"><img src="images/gallery-2.jpeg" alt="Family photo 2" /></article>
+            <article class="slider-card"><img src="images/gallery-3.jpeg" alt="Family photo 3" /></article>
+            <article class="slider-card"><img src="images/gallery-4.jpeg" alt="Family photo 4" /></article>
+            <article class="slider-card"><img src="images/gallery-5.jpeg" alt="Family photo 5" /></article>
+            <article class="slider-card"><img src="images/gallery-6.jpeg" alt="Family photo 6" /></article>
+            <article class="slider-card"><img src="images/gallery-7.jpeg" alt="Family photo 7" /></article>
+            <article class="slider-card"><img src="images/gallery-8.jpeg" alt="Family photo 8" /></article>
+            <article class="slider-card"><img src="images/gallery-9.jpeg" alt="Family photo 9" /></article>
+            <article class="slider-card"><img src="images/gallery-10.jpeg" alt="Family photo 10" /></article>
+            <article class="slider-card"><img src="images/gallery-11.jpeg" alt="Family photo 11" /></article>
+            <article class="slider-card"><img src="images/gallery-12.jpeg" alt="Family photo 12" /></article>
           </div>
 
           <!-- GROUP 2 (duplicate for infinite scroll) -->
           <div class="slider-group" aria-hidden="true">
-            <article class="slider-card"><img src="images/gallery-1.jpeg" /></article>
-            <article class="slider-card"><img src="images/gallery-2.jpeg" /></article>
-            <article class="slider-card"><img src="images/gallery-3.jpeg" /></article>
-            <article class="slider-card"><img src="images/gallery-4.jpeg" /></article>
-            <article class="slider-card"><img src="images/gallery-5.jpeg" /></article>
-            <article class="slider-card"><img src="images/gallery-6.jpeg" /></article>
-            <article class="slider-card"><img src="images/gallery-7.jpeg" /></article>
-            <article class="slider-card"><img src="images/gallery-8.jpeg" /></article>
-            <article class="slider-card"><img src="images/gallery-9.jpeg" /></article>
-            <article class="slider-card"><img src="images/gallery-10.jpeg" /></article>
-            <article class="slider-card"><img src="images/gallery-11.jpeg" /></article>
-            <article class="slider-card"><img src="images/gallery-12.jpeg" /></article>
+            <article class="slider-card"><img src="images/gallery-1.jpeg" alt="Family photo 1" /></article>
+            <article class="slider-card"><img src="images/gallery-2.jpeg" alt="Family photo 2" /></article>
+            <article class="slider-card"><img src="images/gallery-3.jpeg" alt="Family photo 3" /></article>
+            <article class="slider-card"><img src="images/gallery-4.jpeg" alt="Family photo 4" /></article>
+            <article class="slider-card"><img src="images/gallery-5.jpeg" alt="Family photo 5" /></article>
+            <article class="slider-card"><img src="images/gallery-6.jpeg" alt="Family photo 6" /></article>
+            <article class="slider-card"><img src="images/gallery-7.jpeg" alt="Family photo 7" /></article>
+            <article class="slider-card"><img src="images/gallery-8.jpeg" alt="Family photo 8" /></article>
+            <article class="slider-card"><img src="images/gallery-9.jpeg" alt="Family photo 9" /></article>
+            <article class="slider-card"><img src="images/gallery-10.jpeg" alt="Family photo 10" /></article>
+            <article class="slider-card"><img src="images/gallery-11.jpeg" alt="Family photo 11" /></article>
+            <article class="slider-card"><img src="images/gallery-12.jpeg" alt="Family photo 12" /></article>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- MESSAGE -->
+    <!-- MESSAGE SECTION -->
     <section class="message-card fade-up">
       <div class="message-content">
         <h2 class="fade-up">For Amma</h2>
-
         <p class="fade-up">
           Amma, your love is the gentle light that makes our home feel warm and safe.
           Every memory with you is precious, and today we celebrate you with all our hearts.
         </p>
-
         <p class="message-signoff fade-up">With love always, your family</p>
       </div>
     </section>

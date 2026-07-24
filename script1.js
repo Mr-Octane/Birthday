@@ -81,6 +81,25 @@ document.addEventListener('DOMContentLoaded', () => {
   }, 6000);
 }
 
+  function createBalloon() {
+  const balloon = document.createElement('div');
+  balloon.classList.add('balloon');
+
+  const emojis = ['🎈', '🎉', '🎊'];
+  balloon.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+
+  balloon.style.left = Math.random() * 100 + 'vw';
+  balloon.style.animationDuration = (Math.random() * 3 + 5) + 's';
+
+  document.querySelector('.balloons').appendChild(balloon);
+
+  setTimeout(() => {
+    balloon.remove();
+  }, 8000);
+}
+
+setInterval(createBalloon, 900);
+
 setInterval(createHeart, 300);
 
   // scroll arrow

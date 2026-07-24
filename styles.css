@@ -224,7 +224,7 @@ h1 {
   display: flex;
   gap: 1rem;
   min-width: max-content;
-  animation: scrollLeft 32s linear infinite;
+  animation: scrollLeft 60s linear infinite;
 }
 
 .photo-carousel:hover .slider-track {

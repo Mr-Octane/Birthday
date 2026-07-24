@@ -189,6 +189,11 @@ h1 {
   font-size: 1rem;
 }
 
+.gallery-section {
+  min-width: 0;
+  overflow: hidden;
+}
+
 .photo-carousel {
   position: relative;
   overflow: hidden;

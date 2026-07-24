@@ -97,6 +97,18 @@ document.addEventListener('DOMContentLoaded', () => {
     balloon.remove();
   }, 8000);
 }
+ window.addEventListener("DOMContentLoaded", () => {
+  const audio = document.getElementById("bg-music");
+  if (audio) {
+    audio.volume = 0.25; // softer volume
+    audio.play().catch(() => {
+      // If autoplay is blocked, unmute on first click
+      document.addEventListener("click", () => {
+        audio.play();
+      }, { once: true });
+    });
+  }
+});
 
 setInterval(createBalloon, 900);
 

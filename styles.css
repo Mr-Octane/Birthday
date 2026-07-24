@@ -9,13 +9,6 @@
   --shadow: rgba(128, 65, 93, 0.14);
 }
 
-* {
-  box-sizing: border-box;
-}
-
-.hero * {
-  outline: 1px solid red;
-}
 
 
 html {

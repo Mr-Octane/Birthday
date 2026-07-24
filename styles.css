@@ -33,7 +33,7 @@ body {
 
 .page {
   width: min(50%, 100px);
-  max-width: 760px;
+  max-width: 160px;
   margin: 0 auto;
   padding: 1.5rem 1rem 2rem;
   display: grid;
